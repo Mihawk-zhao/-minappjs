@@ -1,6 +1,6 @@
 {
   "name": "@minappjs/webapi",
-  "version": "3.0.2",
+  "version": "3.0.3",
   "description": "知晓云接口封装，js跨平台【webapi】",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",

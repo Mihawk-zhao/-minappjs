@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-01-29 11:37:27
- * @LastEditTime: 2020-05-23 12:51:15
+ * @LastEditTime: 2020-05-23 13:26:29
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /minapp-fetch/README.md
@@ -14,7 +14,7 @@
   
 使用：  
 ```js
-const minapp = require('minapp-fetch').init('webapi', {
+const minapp = require('@minappjs/webapi').init('webapi', {
   clientID: '', //必填
   host: '',  //为自定义域名(如: https://api.wefishbone.com)
   accessToken: '', //用户token
