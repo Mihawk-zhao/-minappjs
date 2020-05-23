@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-01-29 11:37:27
- * @LastEditTime: 2020-05-23 12:07:25
+ * @LastEditTime: 2020-05-23 12:51:15
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /minapp-fetch/README.md
@@ -31,11 +31,7 @@ const minapp = require('minapp-fetch').init('webapi', {
 3. **方法丰富**：除官方的方法外，还增加了许多其他实用方法  
 4. **代码提示**：支持代码提示，类型定义文件`index.d.ts`  
   
-    
-    
-#### v3.0.0  
-- 此`webapi`还是以前的引用方法。
-   
+
 ### 应用案例    
 [Fishbone资讯](https://wefishbone.com)
   

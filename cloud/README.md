@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-01-29 11:37:27
- * @LastEditTime: 2020-05-23 12:03:29
+ * @LastEditTime: 2020-05-23 12:42:47
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /minapp-fetch/README.md
@@ -10,6 +10,8 @@
 ### 知晓云js跨平台接口     
    
 知晓云让后台开发变得更简单，我们让知晓云开发变得更简单。  
+    
+> API网关的推出，以后会重点更新`@minappjs/cloud`方法  
     
 使用：  
 ```js
