@@ -18,7 +18,7 @@ type methodList = '=' | '!=' | '<' | '<=' | '>' | '>=' |
 
 
 
-function initFetchCountContent(args: ['webapi', {clientID?: string, host?: string, accessToken?: string, env?: string}]){
+function initFetchCountContent(args: {clientID: string, host?: string, accessToken?: string, env?: string}){
 
   function fetchCountContent(contentGroupID: number, params: {
     p0?: [string, methodList, ...any[]]

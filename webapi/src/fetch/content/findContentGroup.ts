@@ -1,10 +1,15 @@
+/*
+ * @Author: your name
+ * @Date: 2020-05-18 19:46:11
+ * @LastEditTime: 2020-05-27 15:19:45
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /@minappjs/webapi/src/fetch/content/findContentGroup.ts
+ */ 
 
 import { setArgs, getBaaSF } from '../../utils/utils'
-import { PLATFORM_NAME_BAAS, PLATFORM_NAME } from '../../constants/constants'
-import { PLATFORM_ERROR } from '../../constants/error'
 
 let ArgsObj: {
-  Platform?: string | undefined
   RequestBase?: string | undefined
   Header?: {
     'Content-Type'?: string
@@ -19,35 +24,29 @@ function fetchFindContentGroup(params:{
   limit?: number
   withCount?: boolean
 } = {}){
-  let BaaS_F = getBaaSF(ArgsObj)
-
-  if(!ArgsObj.Platform){
-    throw new Error(PLATFORM_ERROR)
-  }
+  let BaaS_F = getBaaSF()
 
   //webapi
-  if(ArgsObj.Platform === PLATFORM_NAME.WEBAPI){
-    return new Promise((resolve, reject)=>{
-      BaaS_F({
-        method: 'get',
-        url: `${ArgsObj.RequestBase}/hserve/v2.2/content/group/`,
-        headers: ArgsObj.Header,
-        params: {
-          limit: params.limit || 20,
-          offset: (params.limit || 20) * ((params.page || 1) - 1),
-          return_total_count: params.withCount ? 1 : 0,
-        },
-      }).then((res: any) => {
-        resolve(res)
-      }).catch((err: any)=>{
-        reject(err)
-      })
+  return new Promise((resolve, reject)=>{
+    BaaS_F({
+      method: 'get',
+      url: `${ArgsObj.RequestBase}/hserve/v2.2/content/group/`,
+      headers: ArgsObj.Header,
+      params: {
+        limit: params.limit || 20,
+        offset: (params.limit || 20) * ((params.page || 1) - 1),
+        return_total_count: params.withCount ? 1 : 0,
+      },
+    }).then((res: any) => {
+      resolve(res)
+    }).catch((err: any)=>{
+      reject(err)
     })
-  }
+  })
 }
 
 
-function initFetchFindContentGroup(args: ['webapi', {clientID?: string, host?: string, accessToken?: string, env?: string}]){
+function initFetchFindContentGroup(args: {clientID: string, host?: string, accessToken?: string, env?: string}){
   ArgsObj = setArgs(args)
   return fetchFindContentGroup
 }

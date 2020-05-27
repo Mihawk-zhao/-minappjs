@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-01-29 11:37:27
- * @LastEditTime: 2020-05-23 12:42:47
+ * @LastEditTime: 2020-05-27 12:12:05
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /minapp-fetch/README.md
@@ -11,9 +11,7 @@
    
 知晓云让后台开发变得更简单，我们让知晓云开发变得更简单。  
     
-> API网关的推出，以后会重点更新`@minappjs/cloud`方法  
-    
-使用：  
+使用：(require也可以)  
 ```js
 import minapp from '@minappjs/cloud'
 //或
@@ -31,7 +29,14 @@ import { find } from '@minappjs/cloud'
 4. **代码提示**：支持代码提示，类型定义文件`index.d.ts`（大小约90kb）  
 
    
+   
+### 加入讨论  
+大家可以加入群聊，一起讨论minapp问题，或知晓云的问题。加`fairy-pm`，备注`知晓云开发`，会拉你们进入讨论群。  
+  
+
 ### 案例    
 [Fishbone资讯](https://wefishbone.com)
   
-  
+### 更新日志  
+#### v3.0.2  
+- 尝试使用api网关，发现直接调用云函数还好用点。  

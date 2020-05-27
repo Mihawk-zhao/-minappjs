@@ -1,10 +1,15 @@
+/*
+ * @Author: your name
+ * @Date: 2020-05-18 19:46:11
+ * @LastEditTime: 2020-05-27 15:36:58
+ * @LastEditors: Please set LastEditors
+ * @Description: In User Settings Edit
+ * @FilePath: /@minappjs/webapi/src/fetch/request/request.ts
+ */ 
 
 import { setArgs, getBaaSF } from '../../utils/utils'
-import { PLATFORM_NAME_BAAS, PLATFORM_NAME } from '../../constants/constants'
-import { PLATFORM_ERROR } from '../../constants/error'
 
 let ArgsObj: {
-  Platform?: string | undefined
   RequestBase?: string | undefined
   Header?: {
     'Content-Type'?: string
@@ -44,25 +49,20 @@ function fetchRequest(params: {
   cancelToken?: any
   dataType?: 'arraybuffer' | 'blob' | 'document' | 'json' | 'text' | 'stream'
 }){
-  let BaaS_F = getBaaSF(ArgsObj)
-  if(!ArgsObj.Platform){
-    throw new Error(PLATFORM_ERROR)
-  }
+  let BaaS_F = getBaaSF()
 
   //webapi
-  if(ArgsObj.Platform === PLATFORM_NAME.WEBAPI){
-    return new Promise((resolve, reject)=>{
-      BaaS_F(params).then((res: any) => {
-        resolve(res)
-      }, (err: any) => {
-        reject(err)
-      })
+  return new Promise((resolve, reject)=>{
+    BaaS_F(params).then((res: any) => {
+      resolve(res)
+    }, (err: any) => {
+      reject(err)
     })
-  }
+  })
 }
 
 
-function initFetchRequest(args: ['webapi', {clientID?: string, host?: string, accessToken?: string, env?: string}]){
+function initFetchRequest(args: {clientID: string, host?: string, accessToken?: string, env?: string}){
   ArgsObj = setArgs(args)
   return fetchRequest
 }

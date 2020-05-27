@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-01-29 11:37:27
- * @LastEditTime: 2020-05-23 12:02:33
+ * @LastEditTime: 2020-05-27 12:05:36
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /minapp-fetch/README.md
@@ -29,7 +29,9 @@ import { find } from '@minappjs/alipay'
 4. **代码提示**：支持代码提示，类型定义文件`index.d.ts`（大小约90kb）  
 
    
+### 加入讨论  
+大家可以加入群聊，一起讨论minapp问题，或知晓云的问题。加`fairy-pm`，备注`知晓云开发`，会拉你们进入讨论群。  
+  
 ### 案例    
 [Fishbone资讯](https://wefishbone.com)
-  
   

@@ -1,10 +1,15 @@
+/*
+ * @Author: your name
+ * @Date: 2020-05-18 19:46:11
+ * @LastEditTime: 2020-05-27 15:21:41
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /@minappjs/webapi/src/fetch/content/getContentGroup.ts
+ */ 
 
 import { setArgs, getBaaSF } from '../../utils/utils'
-import { PLATFORM_NAME_BAAS, PLATFORM_NAME } from '../../constants/constants'
-import { PLATFORM_ERROR } from '../../constants/error'
 
 let ArgsObj: {
-  Platform?: string | undefined
   RequestBase?: string | undefined
   Header?: {
     'Content-Type'?: string
@@ -15,29 +20,24 @@ let ArgsObj: {
 }
 
 function fetchGetContentGroup(contentGroupID: number){
-  let BaaS_F = getBaaSF(ArgsObj)
+  let BaaS_F = getBaaSF()
 
-  if(!ArgsObj.Platform){
-    throw new Error(PLATFORM_ERROR)
-  }
   //webapi
-  if(ArgsObj.Platform === PLATFORM_NAME.WEBAPI){
-    return new Promise((resolve, reject)=>{
-      BaaS_F({
-        method: 'get',
-        url: `${ArgsObj.RequestBase}/hserve/v2.2/content/group/${contentGroupID}/`,
-        headers: ArgsObj.Header
-      }).then((res: any) => {
-        resolve(res)
-      }).catch((err: any) => {
-        reject(err)
-      })
+  return new Promise((resolve, reject)=>{
+    BaaS_F({
+      method: 'get',
+      url: `${ArgsObj.RequestBase}/hserve/v2.2/content/group/${contentGroupID}/`,
+      headers: ArgsObj.Header
+    }).then((res: any) => {
+      resolve(res)
+    }).catch((err: any) => {
+      reject(err)
     })
-  }
+  })
 }
 
 
-function initFetchGetContentGroup(args: ['webapi', {clientID?: string, host?: string, accessToken?: string, env?: string}]){
+function initFetchGetContentGroup(args: {clientID: string, host?: string, accessToken?: string, env?: string}){
   ArgsObj = setArgs(args)
   return fetchGetContentGroup
 }

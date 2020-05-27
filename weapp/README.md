@@ -28,6 +28,11 @@ import { find } from '@minappjs/weapp'
 3. **方法丰富**：除官方的方法外，还增加了许多其他实用方法  
 4. **代码提示**：支持代码提示，类型定义文件`index.d.ts`（大小约90kb）  
 
+
+      
+### 加入讨论  
+大家可以加入群聊，一起讨论minapp问题，或知晓云的问题。加`fairy-pm`，备注`知晓云开发`，会拉你们进入讨论群。  
+  
    
 ### 案例    
 [Fishbone资讯](https://wefishbone.com)

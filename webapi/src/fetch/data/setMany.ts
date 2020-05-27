@@ -12,7 +12,7 @@ type dataType = string | string[] | number | number[] | boolean | boolean[] | nu
 
 
 // 同时进行多张表的查寻
-function initFetchSetMany(args: ['webapi', {clientID?: string, host?: string, accessToken?: string, env?: string}]){
+function initFetchSetMany(args: {clientID: string, host?: string, accessToken?: string, env?: string}){
 
   function fetchSetMany(setArray: {
     [index: number]: [string | number, {

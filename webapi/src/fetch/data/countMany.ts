@@ -13,7 +13,7 @@ type methodList = '=' | '!=' | '<' | '<=' | '>' | '>=' |
 
 
 
-function initFetchCountMany(args: ['webapi', {clientID?: string, host?: string, accessToken?: string, env?: string}]){
+function initFetchCountMany(args: {clientID: string, host?: string, accessToken?: string, env?: string}){
   function fetchCountMany(findArray: {
     [index: number]: [string | number, {
       p0?: [string, methodList, ...any[]]

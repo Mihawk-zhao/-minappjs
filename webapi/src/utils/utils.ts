@@ -1,14 +1,9 @@
-import { PLATFORM_NAME_ARR, PLATFORM_NAME } from '../constants/constants'
-import { ARGS_ERROR, PLATFORM_ERROR, CLIENT_ID_ERROR } from '../constants/error'
+import { CLIENT_ID_ERROR } from '../constants/error'
 
 
 //生成参数对象
-export function setArgs(args: ['webapi', {clientID?: string, host?: string, accessToken?: string, env?: string}]){
-  if(args.length === 0){
-    throw new Error(ARGS_ERROR)
-  }
-  let Platform:string = '',
-      RequestBase:string ='',
+export function setArgs(args: {clientID: string, host?: string, accessToken?: string, env?: string}){
+  let RequestBase:string ='',
       options: {
         clientID?: string, 
         host?: string, 
@@ -21,58 +16,31 @@ export function setArgs(args: ['webapi', {clientID?: string, host?: string, acce
         'Authorization'?: string,
         'X-Hydrogen-Env-ID'?: string,
       } = {}
-  if(PLATFORM_NAME_ARR.indexOf(args[0]) === -1){
-    throw new Error(PLATFORM_ERROR)
+  options = args
+  if(!options.clientID){
+    throw new Error(CLIENT_ID_ERROR)
   }
-  [Platform, options] = args
-  if(options){
-    if(!options.clientID){
-      throw new Error(CLIENT_ID_ERROR)
-    }
-    RequestBase = options.host || `https://${options.clientID}.myminapp.com`
-    Header = {
-      'Content-Type': 'application/json',
-      'X-Hydrogen-Client-ID': options.clientID,
-    }
-    if(options.accessToken){
-      Header['Authorization'] = `Hydrogen-r1 ${options.accessToken}`
-    }
-    if(options.env){
-      Header['X-Hydrogen-Env-ID'] = options.env
-    }
+  RequestBase = options.host || `https://${options.clientID}.myminapp.com`
+  Header = {
+    'Content-Type': 'application/json',
+    'X-Hydrogen-Client-ID': options.clientID,
+  }
+  if(options.accessToken){
+    Header['Authorization'] = `Hydrogen-r1 ${options.accessToken}`
+  }
+  if(options.env){
+    Header['X-Hydrogen-Env-ID'] = options.env
   }
   return{
-    Platform,
     RequestBase,
     Header
   }
 }
 
 //根据平台，返回请求方式， BaaS/axios
-export function getBaaSF(ArgsObj: {
-  Platform?: string | undefined
-  RequestBase?: string | undefined
-  Header?: {
-    'Content-Type'?: string
-    'X-Hydrogen-Client-ID'?: string,
-    'Authorization'?: string,
-    'X-Hydrogen-Env-ID'?: string,
-  }
-}){
-  switch(ArgsObj.Platform){
-    case PLATFORM_NAME.WEBAPI:
-      return require('axios').create({
-        withCredentials: true
-      })
-    default:
-      throw new Error(PLATFORM_ERROR)
-  }
+export function getBaaSF(){
+  return require('axios')
 }
-
-
-
-
-
 
 
 export const isArray = (value: any) => {

@@ -11,7 +11,7 @@ type methodList = '=' | '!=' | '<' | '<=' | '>' | '>=' |
 
 
 
-function initFetchCountUserMany(args: ['webapi', {clientID?: string, host?: string, accessToken?: string, env?: string}]){
+function initFetchCountUserMany(args: {clientID: string, host?: string, accessToken?: string, env?: string}){
   function fetchCountUserMany(findArray: {
     [index: number]: {
       p0?: [string, methodList, ...any[]]

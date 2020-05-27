@@ -12,7 +12,7 @@ type methodList = '=' | '!=' | '<' | '<=' | '>' | '>=' |
 'include' | 'withinCircle' | 'withinRegion' | 'within'
 
 
-function initFetchFindUserMany(args: ['webapi', {clientID?: string, host?: string, accessToken?: string, env?: string}]){
+function initFetchFindUserMany(args: {clientID: string, host?: string, accessToken?: string, env?: string}){
   function fetchFindUserMany(findArray: {
     [index: number]: {
       p0?: [string, methodList, ...any[]]

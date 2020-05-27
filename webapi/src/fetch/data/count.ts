@@ -9,7 +9,7 @@ type methodList = '=' | '!=' | '<' | '<=' | '>' | '>=' |
 
 
 
-function initFetchCount(args: ['webapi', {clientID?: string, host?: string, accessToken?: string, env?: string}]){
+function initFetchCount(args: {clientID: string, host?: string, accessToken?: string, env?: string}){
   function fetchCount(table: string | number, params: {
     p0?: [string, methodList, ...any[]]
     p1?: [string, methodList, ...any[]]

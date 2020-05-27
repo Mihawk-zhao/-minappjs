@@ -1,4 +1,12 @@
-export const ARGS_ERROR = `传入的参数(Platform/ClientID/RequestBase/AccessToken)有错。`
+/*
+ * @Author: your name
+ * @Date: 2020-05-18 19:46:11
+ * @LastEditTime: 2020-05-27 15:11:25
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /@minappjs/webapi/src/constants/error.ts
+ */ 
+
 export const PLATFORM_ERROR = `平台(Platform)不正确。`
 export const CLIENT_ID_ERROR = `未输入clientID。`
 

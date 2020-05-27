@@ -14,7 +14,7 @@ type methodList = '=' | '!=' | '<' | '<=' | '>' | '>=' |
 
 
 
-function initFetchFindMany(args: ['webapi', {clientID?: string, host?: string, accessToken?: string, env?: string}]){
+function initFetchFindMany(args: {clientID: string, host?: string, accessToken?: string, env?: string}){
   function fetchFindMany(findArray: {
     [index: number]: [string | number, {
       p0?: [string, methodList, ...any[]]

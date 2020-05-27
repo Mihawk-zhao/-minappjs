@@ -9,10 +9,6 @@ import findContentGroup from './fetch/content/findContentGroup'
 import getCategory from './fetch/content/getCategory'
 import getContent from './fetch/content/getContent'
 import getContentGroup from './fetch/content/getContentGroup'
-import setCategory from './fetch/content/setCategory'
-import setContent from './fetch/content/setContent'
-import updateCategory from './fetch/content/updateCategory'
-import updateContent from './fetch/content/updateContent'
 
 //数据表
 import count from './fetch/data/count'
@@ -59,6 +55,7 @@ import login from './fetch/user/login'
 import logout from './fetch/user/logout'
 import passwordReset from './fetch/user/passwordReset'
 import register from './fetch/user/register'
+import userInfoReset from './fetch/user/userInfoReset'
 
 //用户/用户组
 import countUser from './fetch/userGroup/countUser'
@@ -66,11 +63,10 @@ import countUserMany from './fetch/userGroup/countUserMany'
 import findUser from './fetch/userGroup/findUser'
 import findUserMany from './fetch/userGroup/findUserMany'
 import getUser from './fetch/userGroup/getUser'
-import updateUser from './fetch/userGroup/updateUser'
 
 
 
-function init(...args: ['webapi', {clientID?: string, host?: string, accessToken?: string, env?: string}]){
+function init(args: {clientID: string, host?: string, accessToken?: string, env?: string}){
   return {
     countContent: countContent(args),
     findCategory: findCategory(args),
@@ -79,10 +75,6 @@ function init(...args: ['webapi', {clientID?: string, host?: string, accessToken
     getCategory: getCategory(args),
     getContent: getContent(args),
     getContentGroup: getContentGroup(args),
-    setCategory: setCategory(args),
-    setContent: setContent(args),
-    updateCategory: updateCategory(args),
-    updateContent: updateContent(args),
     
     count: count(args),
     countMany: countMany(args),
@@ -124,7 +116,7 @@ function init(...args: ['webapi', {clientID?: string, host?: string, accessToken
     findUser: findUser(args),
     findUserMany: findUserMany(args),
     getUser: getUser(args),
-    updateUser: updateUser(args),
+    userInfoReset: userInfoReset(args),
   }
 }
 

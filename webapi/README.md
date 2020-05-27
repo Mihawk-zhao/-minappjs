@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-01-29 11:37:27
- * @LastEditTime: 2020-05-23 13:26:29
+ * @LastEditTime: 2020-05-27 15:57:07
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /minapp-fetch/README.md
@@ -14,7 +14,7 @@
   
 使用：  
 ```js
-const minapp = require('@minappjs/webapi').init('webapi', {
+const minapp = require('@minappjs/webapi').init({
   clientID: '', //必填
   host: '',  //为自定义域名(如: https://api.wefishbone.com)
   accessToken: '', //用户token
@@ -32,7 +32,16 @@ const minapp = require('@minappjs/webapi').init('webapi', {
 4. **代码提示**：支持代码提示，类型定义文件`index.d.ts`  
   
 
+      
+### 加入讨论  
+大家可以加入群聊，一起讨论minapp问题，或知晓云的问题。加`fairy-pm`，备注`知晓云开发`，会拉你们进入讨论群。  
+  
+   
 ### 应用案例    
-[Fishbone资讯](https://wefishbone.com)
+[Fishbone资讯](https://wefishbone.com)  
+
+### 更新日志  
+#### v3.0.4  
+- 简化方法，更改`updateUser`为`userInfoReset`。
   
   
