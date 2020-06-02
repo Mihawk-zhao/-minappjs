@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-05-18 09:51:11
+ * @LastEditTime: 2020-06-02 09:30:10
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /@minappjs/cloud/src/constants/constants.ts
+ */ 
 
 export const PLATFORM_NAME = {
   ALIPAY: 'alipay',
@@ -11,34 +19,6 @@ export const PLATFORM_NAME = {
   WEBAPI: 'webapi',
 }
 
-export const PLATFORM_NAME_ARR = [
-  'alipay',
-  'cloud',           //云函数
-  'op',                 //运营后台
-  'qq',                 
-  'swan',             
-  'weapp',
-  'tt',
-  'web',
-  'webapi',
-]
-
-//以BaaS方式请求的平台
-export const PLATFORM_NAME_BAAS = [
-  'alipay',
-  'cloud',           //云函数
-  'qq',                 
-  'swan',             
-  'weapp',
-  'tt',
-  'web',
-]
-
-//以axios请求的平台
-export const PLATFORM_NAME_AXIOS = [
-  'op',                 //运营后台
-  'webapi',
-]
 
 //更新数据的方法
 export const UPDATE_METHORD = [

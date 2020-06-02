@@ -1,13 +1,14 @@
 {
-  "name": "@minappjs/cloud",
-  "version": "3.10.0",
-  "description": "知晓云接口封装，js跨平台【云函数端】",
+  "name": "@minappjs/rn",
+  "version": "3.0.2",
+  "description": "知晓云接口封装，js跨平台【React Native端】",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "author": "",
   "license": "ISC",
   "scripts": {
-    "build": "npx tsc"
+    "dist": "npx tsc",
+    "build": "npx gulp copy"
   },
   "files": [
     "/lib"
@@ -18,9 +19,12 @@
   },
   "dependencies": {
     "@types/node": "^13.9.1",
+    "axios": "^0.19.2",
     "p-limit": "^2.2.2"
   },
   "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-uglify": "^3.0.2",
     "typescript": "^3.9.2"
   },
   "keywords": [
