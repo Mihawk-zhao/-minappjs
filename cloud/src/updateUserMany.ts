@@ -240,8 +240,4 @@ function fetchUpdateUserMany(params: {
 }
 
 
-function initFetchUpdateUserMany(){
-  return fetchUpdateUserMany
-}
-
-export default initFetchUpdateUserMany
+export default fetchUpdateUserMany

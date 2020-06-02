@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-04-16 19:21:06
- * @LastEditTime: 2020-05-18 14:37:17
+ * @LastEditTime: 2020-06-02 11:25:36
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /minapp-fetch/src/fetch/content/deleteCategory.ts
@@ -25,9 +25,4 @@ function fetchDeleteCategory(contentGroupID: number, categoryID: number){
   
 }
 
-
-function initFetchDeleteCategory(){
-  return fetchDeleteCategory
-}
-
-export default initFetchDeleteCategory
+export default fetchDeleteCategory

@@ -18,9 +18,4 @@ function fetchDeleteUserGroup(groupIDList: number[]){
   })
 }
 
-
-function initFetchDeleteUserGroup(){
-  return fetchDeleteUserGroup
-}
-
-export default initFetchDeleteUserGroup
+export default fetchDeleteUserGroup

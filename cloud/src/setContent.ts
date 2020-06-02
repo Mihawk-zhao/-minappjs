@@ -33,8 +33,4 @@ function fetchSetContent(contentGroupID: number, params: {
 }
 
 
-function initFetchSetContent(){
-  return fetchSetContent
-}
-
-export default initFetchSetContent
+export default fetchSetContent

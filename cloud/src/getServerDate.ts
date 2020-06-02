@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-05-18 09:51:11
- * @LastEditTime: 2020-06-02 09:24:12
- * @LastEditors: your name
+ * @LastEditTime: 2020-06-02 11:29:19
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /@minappjs/cloud/src/getServerDate.ts
  */ 
@@ -26,9 +26,4 @@ function fetchGetServerDate(){
   })
 }
 
-
-function initFetchGetServerDate(){
-  return fetchGetServerDate
-}
-
-export default initFetchGetServerDate
+export default fetchGetServerDate

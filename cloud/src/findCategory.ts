@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-01-23 17:44:21
- * @LastEditTime: 2020-05-18 14:39:20
+ * @LastEditTime: 2020-06-02 11:26:32
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /minapp-fetch/src/fetch/content/findCategory.ts
@@ -30,9 +30,4 @@ function fetchFindCategory(contentGroupID: number, params: {
   
 }
 
-
-function initFindCategory(){
-  return fetchFindCategory
-}
-
-export default initFindCategory
+export default fetchFindCategory

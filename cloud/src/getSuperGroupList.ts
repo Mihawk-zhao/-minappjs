@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-05-18 09:51:12
- * @LastEditTime: 2020-05-18 15:27:20
- * @LastEditors: your name
+ * @LastEditTime: 2020-06-02 11:29:31
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /@ownpack/cloud/src/fetch/userGroup/getSuperGroupList.ts
  */ 
@@ -30,8 +30,4 @@ function fetchGetSuperGroupList(params: {
 }
 
 
-function initFetchGetSuperGroupList(){
-  return fetchGetSuperGroupList
-}
-
-export default initFetchGetSuperGroupList
+export default fetchGetSuperGroupList

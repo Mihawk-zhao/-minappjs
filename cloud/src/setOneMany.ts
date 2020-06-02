@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-05-18 09:51:11
- * @LastEditTime: 2020-05-18 14:54:55
- * @LastEditors: your name
+ * @LastEditTime: 2020-06-02 11:31:10
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /@ownpack/cloud/src/fetch/data/setOneMany.ts
  */ 
@@ -37,9 +37,4 @@ function fetchSetOneMany(table: string | number, params: {
   
 }
 
-
-function initFetchSetOneMany(){
-  return fetchSetOneMany
-}
-
-export default initFetchSetOneMany
+export default fetchSetOneMany

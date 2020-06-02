@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-01-29 11:37:27
- * @LastEditTime: 2020-06-02 10:38:14
+ * @LastEditTime: 2020-06-02 11:40:21
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /minapp-fetch/README.md
@@ -16,7 +16,6 @@
 import minapp from '@minappjs/cloud'
 //或
 import { find } from '@minappjs/cloud'
-//此方式引入的delete名称为deleteData
 ```  
   
 ### 文档  
@@ -39,5 +38,6 @@ import { find } from '@minappjs/cloud'
 [Fishbone资讯](https://wefishbone.com)  
   
 ### 更新日志    
-#### v3.10.0  
+#### v3.10.1  
 - 支持按需加载。需要先进行[配置](https://wefishbone.com/detail/5ed5ae7b899abe7b80d67a5f)。  
+- `delete`方法统一更名为`deleteData`。  

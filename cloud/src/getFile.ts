@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-18 09:51:11
- * @LastEditTime: 2020-06-02 09:24:02
+ * @LastEditTime: 2020-06-02 11:28:55
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /@ownpack/cloud/src/fetch/file/getFile.ts
@@ -27,8 +27,4 @@ function fetchGetFile(fileID: string){
 }
 
 
-function initFetchGetFile(){
-  return fetchGetFile
-}
-
-export default initFetchGetFile
+export default fetchGetFile

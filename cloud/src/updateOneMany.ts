@@ -260,8 +260,4 @@ function fetchUpdateOneMany(table: string | number, params: {
 }
 
 
-function initFetchUpdateOneMany(){
-  return fetchUpdateOneMany
-}
-
-export default initFetchUpdateOneMany
+export default fetchUpdateOneMany

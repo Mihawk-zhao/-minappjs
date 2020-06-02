@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-05-18 09:51:12
- * @LastEditTime: 2020-05-18 15:28:25
- * @LastEditors: your name
+ * @LastEditTime: 2020-06-02 11:29:52
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /@ownpack/cloud/src/fetch/userGroup/getUserGroup.ts
  */ 
@@ -27,8 +27,4 @@ function fetchGetUserGroup(groupID: number[]){
 }
 
 
-function initFetchGetUserGroup(){
-  return fetchGetUserGroup
-}
-
-export default initFetchGetUserGroup
+export default fetchGetUserGroup

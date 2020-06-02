@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-05-18 09:51:11
- * @LastEditTime: 2020-05-18 14:56:01
- * @LastEditors: your name
+ * @LastEditTime: 2020-06-02 11:36:30
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /@ownpack/cloud/src/fetch/data/updateMany.ts
  */ 
@@ -22,30 +22,26 @@ type upMethodList = 'incr' | 'set' | 'unset' | 'patchObject' | 'geo' | 'append' 
 
 
 // 同时进行多张表的查寻
-function initFetchUpdateMany(){
-  function fetchUpdateMany(updateArray: {
-    [index: number]: [string | number, string, {
-      [propName: string]: [upMethodList, dataType] | dataType
-    }]
-  }, plimit: number = 10){
-    return new Promise((resolve, reject)=>{
-      let limit = pLimit(plimit)
-      let input = []
-      if(updateArray.length === 0){
-        throw new Error(FIND_MANY_L_ERROR)
-      }
-      for(let i = 0; i < updateArray.length; i++){
-        input.push(limit(() => fetchUpdate()(updateArray[i][0], updateArray[i][1], updateArray[i][2])))
-      }
-      Promise.all(input).then((res: any) => {
-        resolve(res)
-      }, (err: any) => {
-        reject(err)
-      })
+function fetchUpdateMany(updateArray: {
+  [index: number]: [string | number, string, {
+    [propName: string]: [upMethodList, dataType] | dataType
+  }]
+}, plimit: number = 10){
+  return new Promise((resolve, reject)=>{
+    let limit = pLimit(plimit)
+    let input = []
+    if(updateArray.length === 0){
+      throw new Error(FIND_MANY_L_ERROR)
+    }
+    for(let i = 0; i < updateArray.length; i++){
+      input.push(limit(() => fetchUpdate(updateArray[i][0], updateArray[i][1], updateArray[i][2])))
+    }
+    Promise.all(input).then((res: any) => {
+      resolve(res)
+    }, (err: any) => {
+      reject(err)
     })
-  }
-
-  return fetchUpdateMany
+  })
 }
 
-export default initFetchUpdateMany
+export default fetchUpdateMany

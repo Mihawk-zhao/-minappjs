@@ -25,9 +25,4 @@ function fetchGetSuperGroup(superGroupID: number){
   })
 }
 
-
-function initFetchGetSuperGroup(){
-  return fetchGetSuperGroup
-}
-
-export default initFetchGetSuperGroup
+export default fetchGetSuperGroup

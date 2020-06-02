@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-05-18 09:51:12
- * @LastEditTime: 2020-05-18 15:23:19
- * @LastEditors: your name
+ * @LastEditTime: 2020-06-02 11:24:23
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /@ownpack/cloud/src/fetch/userGroup/createSuperGroup.ts
  */ 
@@ -28,9 +28,4 @@ function fetchCreateSuperGroup(params: {
   })
 }
 
-
-function initFetchCreateSuperGroup(){
-  return fetchCreateSuperGroup
-}
-
-export default initFetchCreateSuperGroup
+export default fetchCreateSuperGroup

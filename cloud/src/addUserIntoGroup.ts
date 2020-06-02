@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-18 09:51:12
- * @LastEditTime: 2020-06-02 09:22:07
+ * @LastEditTime: 2020-06-02 11:19:28
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /@ownpack/cloud/src/fetch/userGroup/addUserIntoGroup.ts
@@ -24,9 +24,4 @@ function fetchAddUserIntoGroup(users: number[], groups: number[]){
   })
 }
 
-
-function initFetchAddUserIntoGroup(){
-  return fetchAddUserIntoGroup
-}
-
-export default initFetchAddUserIntoGroup
+export default fetchAddUserIntoGroup

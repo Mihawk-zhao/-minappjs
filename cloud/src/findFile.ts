@@ -176,9 +176,4 @@ function fetchFindFile(params: {
   })
 }
 
-
-function initFetchFindFile(){
-  return fetchFindFile
-}
-
-export default initFetchFindFile
+export default fetchFindFile

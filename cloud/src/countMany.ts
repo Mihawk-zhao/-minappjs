@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-05-18 09:51:11
- * @LastEditTime: 2020-05-18 14:49:51
- * @LastEditors: your name
+ * @LastEditTime: 2020-06-02 11:23:29
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /@ownpack/cloud/src/fetch/data/countMany.ts
  */ 
@@ -21,47 +21,43 @@ type methodList = '=' | '!=' | '<' | '<=' | '>' | '>=' |
 
 
 
-function initFetchCountMany(){
-  function fetchCountMany(findArray: {
-    [index: number]: [string | number, {
-      p0?: [string, methodList, ...any[]]
-      p1?: [string, methodList, ...any[]]
-      p2?: [string, methodList, ...any[]]
-      p3?: [string, methodList, ...any[]]
-      p4?: [string, methodList, ...any[]]
-      p5?: [string, methodList, ...any[]]
-      p6?: [string, methodList, ...any[]]
-      p7?: [string, methodList, ...any[]]
-      p8?: [string, methodList, ...any[]]
-      p9?: [string, methodList, ...any[]]
-      r: string
-      [propName: string]: [string, methodList, ...any[]] | string | number | boolean | string[] | undefined
-    }]
-  }, plimit: number = 10){
-    return new Promise((resolve, reject)=>{
-      let limit = pLimit(plimit)
-      let input = []
-      if(findArray.length === 0){
-        throw new Error(FIND_MANY_L_ERROR)
+function fetchCountMany(findArray: {
+  [index: number]: [string | number, {
+    p0?: [string, methodList, ...any[]]
+    p1?: [string, methodList, ...any[]]
+    p2?: [string, methodList, ...any[]]
+    p3?: [string, methodList, ...any[]]
+    p4?: [string, methodList, ...any[]]
+    p5?: [string, methodList, ...any[]]
+    p6?: [string, methodList, ...any[]]
+    p7?: [string, methodList, ...any[]]
+    p8?: [string, methodList, ...any[]]
+    p9?: [string, methodList, ...any[]]
+    r: string
+    [propName: string]: [string, methodList, ...any[]] | string | number | boolean | string[] | undefined
+  }]
+}, plimit: number = 10){
+  return new Promise((resolve, reject)=>{
+    let limit = pLimit(plimit)
+    let input = []
+    if(findArray.length === 0){
+      throw new Error(FIND_MANY_L_ERROR)
+    }
+    for(let i = 0; i < findArray.length; i++){
+      findArray[i][1].limit = 1
+      findArray[i][1].withCount = true
+      input.push(limit(() => fetchFind(findArray[i][0], findArray[i][1])))
+    }
+    Promise.all(input).then((res: any) => {
+      let numList = []
+      for(let j = 0; j < res.length; j++){
+        numList.push(res[j].data.meta.total_count)
       }
-      for(let i = 0; i < findArray.length; i++){
-        findArray[i][1].limit = 1
-        findArray[i][1].withCount = true
-        input.push(limit(() => fetchFind()(findArray[i][0], findArray[i][1])))
-      }
-      Promise.all(input).then((res: any) => {
-        let numList = []
-        for(let j = 0; j < res.length; j++){
-          numList.push(res[j].data.meta.total_count)
-        }
-        resolve(numList)
-      }, (err: any) => {
-        reject(err)
-      })
+      resolve(numList)
+    }, (err: any) => {
+      reject(err)
     })
-  }
-  
-  return fetchCountMany
+  })
 }
 
-export default initFetchCountMany
+export default fetchCountMany

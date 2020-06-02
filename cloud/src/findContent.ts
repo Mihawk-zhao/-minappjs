@@ -207,8 +207,4 @@ function fetchFindContent(contentGroupID: number, params: {
 }
 
 
-function initFetchFindContent(){
-  return fetchFindContent
-}
-
-export default initFetchFindContent
+export default fetchFindContent

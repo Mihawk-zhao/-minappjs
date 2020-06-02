@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-05-18 09:51:12
- * @LastEditTime: 2020-05-18 15:32:05
- * @LastEditors: your name
+ * @LastEditTime: 2020-06-02 11:32:06
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /@ownpack/cloud/src/fetch/userGroup/updateUser.ts
  */ 
@@ -78,8 +78,4 @@ function fetchUpdateUser(...data: [number, {
 }
 
 
-function initFetchUpdateUser(){
-  return fetchUpdateUser
-}
-
-export default initFetchUpdateUser
+export default fetchUpdateUser

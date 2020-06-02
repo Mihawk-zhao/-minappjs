@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-05-18 09:51:11
- * @LastEditTime: 2020-05-18 14:52:51
- * @LastEditors: your name
+ * @LastEditTime: 2020-06-02 11:27:59
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /@ownpack/cloud/src/fetch/data/get.ts
  */ 
@@ -28,9 +28,4 @@ function fetchGet(table: string | number, id: string, params: {
   })
 }
 
-
-function initFetchGet(){
-  return fetchGet
-}
-
-export default initFetchGet
+export default fetchGet

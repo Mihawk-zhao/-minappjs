@@ -24,9 +24,4 @@ function fetchGetContentGroup(contentGroupID: number){
   })
 }
 
-
-function initFetchGetContentGroup(){
-  return fetchGetContentGroup
-}
-
-export default initFetchGetContentGroup
+export default fetchGetContentGroup

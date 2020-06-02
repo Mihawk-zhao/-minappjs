@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-05-18 09:51:11
- * @LastEditTime: 2020-06-02 09:25:06
- * @LastEditors: your name
+ * @LastEditTime: 2020-06-02 11:30:30
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /@minappjs/cloud/src/sendSmsCode.ts
  */ 
@@ -26,9 +26,4 @@ function fetchSendSmsCode(phone: string, signatureID: number, userID?: number){
   })
 }
 
-
-function initFetchSendSmsCode(){
-  return fetchSendSmsCode
-}
-
-export default initFetchSendSmsCode
+export default fetchSendSmsCode

@@ -16,7 +16,7 @@ import updateContent_temp from './updateContent'
 //数据表
 import count_temp from './count'
 import countMany_temp from './countMany'
-import deleteData_temp from './delete'
+import deleteData_temp from './deleteData'
 import find_temp from './find'
 import findMany_temp from './findMany'
 import get_temp from './get'
@@ -74,142 +74,142 @@ import updateUserMany_temp from './updateUserMany'
 
 
 export default {
-    countContent: countContent_temp(),
-    deleteCategory: deleteCategory_temp(),
-    deleteContent: deleteContent_temp(),
-    findCategory: findCategory_temp(),
-    findContent: findContent_temp(),
-    findContentGroup: findContentGroup_temp(),
-    getCategory: getCategory_temp(),
-    getContent: getContent_temp(),
-    getContentGroup: getContentGroup_temp(),
-    setCategory: setCategory_temp(),
-    setContent: setContent_temp(),
-    updateCategory: updateCategory_temp(),
-    updateContent: updateContent_temp(),
+    countContent: countContent_temp,
+    deleteCategory: deleteCategory_temp,
+    deleteContent: deleteContent_temp,
+    findCategory: findCategory_temp,
+    findContent: findContent_temp,
+    findContentGroup: findContentGroup_temp,
+    getCategory: getCategory_temp,
+    getContent: getContent_temp,
+    getContentGroup: getContentGroup_temp,
+    setCategory: setCategory_temp,
+    setContent: setContent_temp,
+    updateCategory: updateCategory_temp,
+    updateContent: updateContent_temp,
     
-    count: count_temp(),
-    countMany: countMany_temp(),
-    delete: deleteData_temp(),
-    find: find_temp(),
-    findMany: findMany_temp(),
-    get: get_temp(),
-    getMany: getMany_temp(),
-    set: set_temp(),
-    setMany: setMany_temp(),
-    setOneMany: setOneMany_temp(),
-    update: update_temp(),
-    updateMany: updateMany_temp(),
-    updateOneMany: updateOneMany_temp(),
+    count: count_temp,
+    countMany: countMany_temp,
+    deleteData: deleteData_temp,
+    find: find_temp,
+    findMany: findMany_temp,
+    get: get_temp,
+    getMany: getMany_temp,
+    set: set_temp,
+    setMany: setMany_temp,
+    setOneMany: setOneMany_temp,
+    update: update_temp,
+    updateMany: updateMany_temp,
+    updateOneMany: updateOneMany_temp,
 
-    countFile: countFile_temp(),
-    deleteFile: deleteFile_temp(),
-    findFile: findFile_temp(),
-    getFile: getFile_temp(),
-    upload: upload_temp(),
+    countFile: countFile_temp,
+    deleteFile: deleteFile_temp,
+    findFile: findFile_temp,
+    getFile: getFile_temp,
+    upload: upload_temp,
 
-    invoke: invoke_temp(),
+    invoke: invoke_temp,
 
-    getAsyncJobResult: getAsyncJobResult_temp(),
-    getServerDate: getServerDate_temp(),
-    sendEmail: sendEmail_temp(),
-    sendSmsCode: sendSmsCode_temp(),
-    verifySmsCode: verifySmsCode_temp(),
-
-
-    request: request_temp(),
-
-    getTable: getTable_temp(),
-    getTableList: getTableList_temp(),
+    getAsyncJobResult: getAsyncJobResult_temp,
+    getServerDate: getServerDate_temp,
+    sendEmail: sendEmail_temp,
+    sendSmsCode: sendSmsCode_temp,
+    verifySmsCode: verifySmsCode_temp,
 
 
-    addUserIntoGroup: addUserIntoGroup_temp(),
-    countUser: countUser_temp(),
-    countUserMany: countUserMany_temp(),
-    createSuperGroup: createSuperGroup_temp(),
-    createUserGroup: createUserGroup_temp(),
-    deleteSuperGroup: deleteSuperGroup_temp(),
-    deleteUserGroup: deleteUserGroup_temp(),
-    findUser: findUser_temp(),
-    findUserMany: findUserMany_temp(),
-    getSuperGroup: getSuperGroup_temp(),
-    getSuperGroupList: getSuperGroupList_temp(),
-    getUser: getUser_temp(),
-    getUserGroup: getUserGroup_temp(),
-    getUserGroupList: getUserGroupList_temp(),
-    removeUserFromGroup: removeUserFromGroup_temp(),
-    updateSuperGroup: updateSuperGroup_temp(),
-    updateUser: updateUser_temp(),
-    updateUserGroup: updateUserGroup_temp(),
-    updateUserMany: updateUserMany_temp(),
+    request: request_temp,
+
+    getTable: getTable_temp,
+    getTableList: getTableList_temp,
+
+
+    addUserIntoGroup: addUserIntoGroup_temp,
+    countUser: countUser_temp,
+    countUserMany: countUserMany_temp,
+    createSuperGroup: createSuperGroup_temp,
+    createUserGroup: createUserGroup_temp,
+    deleteSuperGroup: deleteSuperGroup_temp,
+    deleteUserGroup: deleteUserGroup_temp,
+    findUser: findUser_temp,
+    findUserMany: findUserMany_temp,
+    getSuperGroup: getSuperGroup_temp,
+    getSuperGroupList: getSuperGroupList_temp,
+    getUser: getUser_temp,
+    getUserGroup: getUserGroup_temp,
+    getUserGroupList: getUserGroupList_temp,
+    removeUserFromGroup: removeUserFromGroup_temp,
+    updateSuperGroup: updateSuperGroup_temp,
+    updateUser: updateUser_temp,
+    updateUserGroup: updateUserGroup_temp,
+    updateUserMany: updateUserMany_temp,
 }
 
 
-export const countContent = countContent_temp()
-export const deleteCategory = deleteCategory_temp()
-export const deleteContent = deleteContent_temp()
-export const findCategory = findCategory_temp()
-export const findContent = findContent_temp()
-export const findContentGroup = findContentGroup_temp()
-export const getCategory = getCategory_temp()
-export const getContent = getContent_temp()
-export const getContentGroup = getContentGroup_temp()
-export const setCategory = setCategory_temp()
-export const setContent = setContent_temp()
-export const updateCategory = updateCategory_temp()
-export const updateContent = updateContent_temp()
+export const countContent = countContent_temp
+export const deleteCategory = deleteCategory_temp
+export const deleteContent = deleteContent_temp
+export const findCategory = findCategory_temp
+export const findContent = findContent_temp
+export const findContentGroup = findContentGroup_temp
+export const getCategory = getCategory_temp
+export const getContent = getContent_temp
+export const getContentGroup = getContentGroup_temp
+export const setCategory = setCategory_temp
+export const setContent = setContent_temp
+export const updateCategory = updateCategory_temp
+export const updateContent = updateContent_temp
   
-export const count = count_temp()
-export const countMany = countMany_temp()
-export const deleteData = deleteData_temp()
-export const find = find_temp()
-export const findMany = findMany_temp()
-export const get = get_temp()
-export const getMany = getMany_temp()
-export const set = set_temp()
-export const setMany = setMany_temp()
-export const setOneMany = setOneMany_temp()
-export const update = update_temp()
-export const updateMany = updateMany_temp()
-export const updateOneMany = updateOneMany_temp()
+export const count = count_temp
+export const countMany = countMany_temp
+export const deleteData = deleteData_temp
+export const find = find_temp
+export const findMany = findMany_temp
+export const get = get_temp
+export const getMany = getMany_temp
+export const set = set_temp
+export const setMany = setMany_temp
+export const setOneMany = setOneMany_temp
+export const update = update_temp
+export const updateMany = updateMany_temp
+export const updateOneMany = updateOneMany_temp
 
-export const countFile = countFile_temp()
-export const deleteFile = deleteFile_temp()
-export const findFile = findFile_temp()
-export const getFile = getFile_temp()
-export const upload = upload_temp()
+export const countFile = countFile_temp
+export const deleteFile = deleteFile_temp
+export const findFile = findFile_temp
+export const getFile = getFile_temp
+export const upload = upload_temp
 
-export const invoke = invoke_temp()
+export const invoke = invoke_temp
 
-export const getAsyncJobResult = getAsyncJobResult_temp()
-export const getServerDate = getServerDate_temp()
-export const sendEmail = sendEmail_temp()
-export const sendSmsCode = sendSmsCode_temp()
-export const verifySmsCode = verifySmsCode_temp()
-
-
-export const request = request_temp()
-
-export const getTable = getTable_temp()
-export const getTableList = getTableList_temp()
+export const getAsyncJobResult = getAsyncJobResult_temp
+export const getServerDate = getServerDate_temp
+export const sendEmail = sendEmail_temp
+export const sendSmsCode = sendSmsCode_temp
+export const verifySmsCode = verifySmsCode_temp
 
 
-export const addUserIntoGroup = addUserIntoGroup_temp()
-export const countUser = countUser_temp()
-export const countUserMany = countUserMany_temp()
-export const createSuperGroup = createSuperGroup_temp()
-export const createUserGroup = createUserGroup_temp()
-export const deleteSuperGroup = deleteSuperGroup_temp()
-export const deleteUserGroup = deleteUserGroup_temp()
-export const findUser = findUser_temp()
-export const findUserMany = findUserMany_temp()
-export const getSuperGroup = getSuperGroup_temp()
-export const getSuperGroupList = getSuperGroupList_temp()
-export const getUser = getUser_temp()
-export const getUserGroup = getUserGroup_temp()
-export const getUserGroupList = getUserGroupList_temp()
-export const removeUserFromGroup = removeUserFromGroup_temp()
-export const updateSuperGroup = updateSuperGroup_temp()
-export const updateUser = updateUser_temp()
-export const updateUserGroup = updateUserGroup_temp()
-export const updateUserMany = updateUserMany_temp()
+export const request = request_temp
+
+export const getTable = getTable_temp
+export const getTableList = getTableList_temp
+
+
+export const addUserIntoGroup = addUserIntoGroup_temp
+export const countUser = countUser_temp
+export const countUserMany = countUserMany_temp
+export const createSuperGroup = createSuperGroup_temp
+export const createUserGroup = createUserGroup_temp
+export const deleteSuperGroup = deleteSuperGroup_temp
+export const deleteUserGroup = deleteUserGroup_temp
+export const findUser = findUser_temp
+export const findUserMany = findUserMany_temp
+export const getSuperGroup = getSuperGroup_temp
+export const getSuperGroupList = getSuperGroupList_temp
+export const getUser = getUser_temp
+export const getUserGroup = getUserGroup_temp
+export const getUserGroupList = getUserGroupList_temp
+export const removeUserFromGroup = removeUserFromGroup_temp
+export const updateSuperGroup = updateSuperGroup_temp
+export const updateUser = updateUser_temp
+export const updateUserGroup = updateUserGroup_temp
+export const updateUserMany = updateUserMany_temp

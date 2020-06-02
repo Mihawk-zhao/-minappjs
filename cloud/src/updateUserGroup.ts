@@ -27,8 +27,4 @@ function fetchUpdateUserGroup(groupID: number, params: {
 }
 
 
-function initFetchUpdateUserGroup(){
-  return fetchUpdateUserGroup
-}
-
-export default initFetchUpdateUserGroup
+export default fetchUpdateUserGroup

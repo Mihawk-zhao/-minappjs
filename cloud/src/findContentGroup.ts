@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-05-18 09:51:11
- * @LastEditTime: 2020-05-18 14:42:18
- * @LastEditors: your name
+ * @LastEditTime: 2020-06-02 11:26:49
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /@ownpack/cloud/src/fetch/content/findContentGroup.ts
  */ 
@@ -32,9 +32,4 @@ function fetchFindContentGroup(params:{
   })
 }
 
-
-function initFetchFindContentGroup(){
-  return fetchFindContentGroup
-}
-
-export default initFetchFindContentGroup
+export default fetchFindContentGroup

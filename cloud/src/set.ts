@@ -27,9 +27,4 @@ function fetchSet(table: string | number, params: {
   })
 }
 
-
-function initFetchSet(){
-  return fetchSet
-}
-
-export default initFetchSet
+export default fetchSet

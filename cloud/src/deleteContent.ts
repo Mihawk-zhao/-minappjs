@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-04-16 19:18:53
- * @LastEditTime: 2020-05-18 14:38:38
+ * @LastEditTime: 2020-06-02 11:25:45
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /minapp-fetch/src/fetch/content/deleteContent.ts
@@ -24,9 +24,4 @@ function fetchDeleteContent(contentGroupID: number, richTextID: number){
   })
 }
 
-
-function initFetchDeleteContent(){
-  return fetchDeleteContent
-}
-
-export default initFetchDeleteContent
+export default fetchDeleteContent

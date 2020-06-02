@@ -26,8 +26,4 @@ function fetchGetTable(table: string | number){
 }
 
 
-function initFetchGetTable(){
-  return fetchGetTable
-}
-
-export default initFetchGetTable
+export default fetchGetTable

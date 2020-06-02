@@ -19,9 +19,4 @@ function fetchSendEmail(params: {
   })
 }
 
-
-function initFetchSendEmail(){
-  return fetchSendEmail
-}
-
-export default initFetchSendEmail
+export default fetchSendEmail

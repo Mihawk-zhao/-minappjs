@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-01-23 18:19:36
- * @LastEditTime: 2020-05-18 14:43:24
+ * @LastEditTime: 2020-06-02 11:28:37
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /minapp-fetch/src/fetch/content/getCategory.ts
@@ -26,8 +26,4 @@ function fetchGetCategory(contentGroupID: number, categoryID: number){
 }
 
 
-function initFetchGetCategory(){
-  return fetchGetCategory
-}
-
-export default initFetchGetCategory
+export default fetchGetCategory

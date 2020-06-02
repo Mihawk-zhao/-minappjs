@@ -29,9 +29,4 @@ function fetchUpdateSuperGroup(superGroupID: number, params: {
   })
 }
 
-
-function initFetchUpdateSuperGroup(){
-  return fetchUpdateSuperGroup
-}
-
-export default initFetchUpdateSuperGroup
+export default fetchUpdateSuperGroup

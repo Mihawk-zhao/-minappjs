@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-05-18 09:51:11
- * @LastEditTime: 2020-06-02 09:21:12
- * @LastEditors: your name
+ * @LastEditTime: 2020-06-02 11:28:10
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /@minappjs/cloud/src/getAsyncJobResult.ts
  */ 
@@ -27,8 +27,4 @@ function fetchGetAsyncJobResult(operationID: number){
 }
 
 
-function initFetchGetAsyncJobResult(){
-  return fetchGetAsyncJobResult
-}
-
-export default initFetchGetAsyncJobResult
+export default fetchGetAsyncJobResult

@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-05-18 09:51:11
- * @LastEditTime: 2020-05-18 15:09:57
- * @LastEditors: your name
+ * @LastEditTime: 2020-06-02 11:30:18
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /@ownpack/cloud/src/fetch/request/request.ts
  */ 
@@ -53,8 +53,4 @@ function fetchRequest(params: {
 }
 
 
-function initFetchRequest(){
-  return fetchRequest
-}
-
-export default initFetchRequest
+export default fetchRequest

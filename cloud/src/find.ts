@@ -189,8 +189,4 @@ function fetchFind(table: string | number, params: {
 }
 
 
-function initFetchFind(){
-  return fetchFind
-}
-
-export default initFetchFind
+export default fetchFind

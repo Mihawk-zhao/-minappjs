@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-05-18 09:51:12
- * @LastEditTime: 2020-05-18 15:29:26
- * @LastEditors: your name
+ * @LastEditTime: 2020-06-02 11:30:11
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /@ownpack/cloud/src/fetch/userGroup/removeUserFromGroup.ts
  */ 
@@ -25,9 +25,4 @@ function fetchRemoveUserFromGroup(users: number[], groups: number[]){
   })
 }
 
-
-function initFetchRemoveUserFromGroup(){
-  return fetchRemoveUserFromGroup
-}
-
-export default initFetchRemoveUserFromGroup
+export default fetchRemoveUserFromGroup

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-04-16 19:19:57
- * @LastEditTime: 2020-05-18 14:45:19
+ * @LastEditTime: 2020-06-02 11:30:41
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /minapp-fetch/src/fetch/content/setCategory.ts
@@ -25,8 +25,4 @@ function fetchSetCategory(contentGroupID: number, params: {
   })
 }
 
-function initFetchSetCategory(){
-  return fetchSetCategory
-}
-
-export default initFetchSetCategory
+export default fetchSetCategory

@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-05-18 09:51:11
- * @LastEditTime: 2020-05-18 15:11:33
- * @LastEditors: your name
+ * @LastEditTime: 2020-06-02 11:29:42
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /@ownpack/cloud/src/fetch/table/getTableList.ts
  */ 
@@ -34,8 +34,4 @@ function fetchGetTableList(params: {
 }
 
 
-function initFetchGetTableList(){
-  return fetchGetTableList
-}
-
-export default initFetchGetTableList
+export default fetchGetTableList

@@ -29,8 +29,4 @@ function fetchGetUser(uid: number, params: {
 }
 
 
-function initFetchGetUser(){
-  return fetchGetUser
-}
-
-export default initFetchGetUser
+export default fetchGetUser

@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-05-18 09:51:11
- * @LastEditTime: 2020-06-02 09:26:26
+ * @LastEditTime: 2020-06-02 11:32:25
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /@ownpack/cloud/src/fetch/file/upload.ts
@@ -44,9 +44,4 @@ function fetchUpload(...data: [
   })
 }
 
-
-function initFetchUpload(){
-  return fetchUpload
-}
-
-export default initFetchUpload
+export default fetchUpload

@@ -31,8 +31,4 @@ function fetchGetUserGroupList(parentID: number | boolean, params: {
 }
 
 
-function initFetchGetUserGroupList(){
-  return fetchGetUserGroupList
-}
-
-export default initFetchGetUserGroupList
+export default fetchGetUserGroupList

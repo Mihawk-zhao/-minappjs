@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-04-16 19:18:29
- * @LastEditTime: 2020-06-02 09:19:08
+ * @LastEditTime: 2020-06-02 11:31:35
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /minapp-fetch/src/fetch/content/updateContent.ts
@@ -93,9 +93,4 @@ function fetchUpdateContent(contentGroupID: number, richTextID: number, params: 
   })
 }
 
-
-function initFetchUpdateContent(){
-  return fetchUpdateContent
-}
-
-export default initFetchUpdateContent
+export default fetchUpdateContent

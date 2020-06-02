@@ -190,9 +190,4 @@ function fetchFindUser(params: {
   })
 }
 
-
-function initFetchFindUser(){
-  return fetchFindUser
-}
-
-export default initFetchFindUser
+export default fetchFindUser

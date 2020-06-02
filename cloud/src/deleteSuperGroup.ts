@@ -1,8 +1,8 @@
 /*
  * @Author: your name
  * @Date: 2020-05-18 09:51:12
- * @LastEditTime: 2020-05-18 15:24:27
- * @LastEditors: your name
+ * @LastEditTime: 2020-06-02 11:26:07
+ * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /@ownpack/cloud/src/fetch/userGroup/deleteSuperGroup.ts
  */ 
@@ -26,8 +26,4 @@ function fetchDeleteSuperGroup(superGroupIDList: number[]){
 }
 
 
-function initFetchDeleteSuperGroup(){
-  return fetchDeleteSuperGroup
-}
-
-export default initFetchDeleteSuperGroup
+export default fetchDeleteSuperGroup
