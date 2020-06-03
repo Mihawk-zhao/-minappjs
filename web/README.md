@@ -2,7 +2,7 @@
   <!--
  * @Author: your name
  * @Date: 2020-01-29 11:37:27
- * @LastEditTime: 2020-05-27 12:25:06
+ * @LastEditTime: 2020-06-03 20:44:52
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /minapp-fetch/README.md
@@ -22,6 +22,7 @@ import { find } from '@minappjs/web'
   
 ### 文档  
 最新接口文档，可在[@minappjs文档](https://wefishbone.com/detail/5ec2781dc66ab4461293c8ea)里查看  
+按需加载参考配置：[@minappjs/cloud按需加载配置文档](https://wefishbone.com/detail/5ed5ae7b899abe7b80d67a5f)  
   
 ### 优点  
 1. **跨平台性**：js平台写法一致，一处写，处处用（个别接口除外） 
@@ -32,10 +33,14 @@ import { find } from '@minappjs/web'
 
       
 ### 加入讨论  
-大家可以加入群聊，一起讨论minapp问题，或知晓云的问题。加`fairy-pm`，备注`知晓云开发`，会拉你们进入讨论群。  
+大家可以加入群聊，一起讨论minapp问题，或知晓云的问题。欢迎加官方微信`fairy-pm`，备注`知晓云`，会拉你进入讨论群。  
   
    
 ### 案例    
-[Fishbone资讯](https://wefishbone.com)
+[Fishbone资讯](https://wefishbone.com)  
   
-  
+    
+### 更新日志    
+#### v3.10.0  
+- 支持按需加载。请参考[配置](https://wefishbone.com/detail/5ed5ae7b899abe7b80d67a5f)。  
+- `delete`方法统一更名为`deleteData`。  

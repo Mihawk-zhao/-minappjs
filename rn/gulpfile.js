@@ -1,3 +1,11 @@
+/*
+ * @Author: your name
+ * @Date: 2020-05-30 13:46:26
+ * @LastEditTime: 2020-06-03 19:22:00
+ * @LastEditors: your name
+ * @Description: In User Settings Edit
+ * @FilePath: /@minappjs/rn/gulpfile.js
+ */ 
 var gulp = require('gulp');
 var uglify = require('gulp-uglify'); //js压缩
 

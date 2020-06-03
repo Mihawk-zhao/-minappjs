@@ -1,14 +1,13 @@
 {
   "name": "@minappjs/web",
-  "version": "3.0.3",
+  "version": "3.10.0",
   "description": "知晓云接口封装，js跨平台【web端】",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
   "author": "",
   "license": "ISC",
   "scripts": {
-    "dist": "npx tsc",
-    "build": "npx gulp copy"
+    "build": "npx tsc"
   },
   "files": [
     "/lib"
@@ -23,8 +22,6 @@
     "p-limit": "^2.2.2"
   },
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-uglify": "^3.0.2",
     "typescript": "^3.9.2"
   },
   "keywords": [
