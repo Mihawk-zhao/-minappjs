@@ -1,0 +1,30 @@
+{
+  "name": "@minappjs/jd",
+  "version": "3.10.0",
+  "description": "知晓云接口封装，js跨平台【京东小程序端】",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
+  "author": "",
+  "license": "ISC",
+  "scripts": {
+    "build": "npx tsc"
+  },
+  "files": [
+    "/lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Mihawk-zhao/-minappjs.git"
+  },
+  "dependencies": {
+    "@types/node": "^13.9.1",
+    "p-limit": "^2.2.2"
+  },
+  "devDependencies": {
+    "typescript": "^3.9.2"
+  },
+  "keywords": [
+    "知晓云",
+    "minappjs"
+  ]
+}
