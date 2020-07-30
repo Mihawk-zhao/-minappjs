@@ -9,7 +9,7 @@
 
 
 
-import minapp, { updateUser, updateUserMany } from '../op/lib'
+import minapp, { updateUser, updateUserMany, subscribe, unsubscribe } from '../weapp/lib'
 
 updateUser(234, {
   teim: ['remove', 'f']
@@ -33,12 +33,18 @@ update('a', 'aa', {
 })
 
 
+subscribe('comment', 'create', (res) => {
+
+}, '4')
+
+unsubscribe('comment', 'create', '4')
 
 
-
-
-
-
+subscribe('name', 'update', (res) => {
+  if(res.event === 'on_update'){
+    // 更新的订阅
+  }
+}, '2')
 
 
 

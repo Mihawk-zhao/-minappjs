@@ -37,6 +37,9 @@ import { find } from '@minappjs/weapp'
 [Fishbone资讯](https://wefishbone.com)
     
 ### 更新日志    
+#### v3.14.1  
+- 新增实时数据库`subscribe`和`unsubscribe`方法。[使用示例](https://wefishbone.com/detail/5f22d20a5cab4d6f035262c8)。  
+  
 #### v3.10.0  
 - 支持按需加载。需要先进行[配置](https://wefishbone.com/detail/5ed5ae7b899abe7b80d67a5f)。  
 - `delete`方法统一更名为`deleteData`。  

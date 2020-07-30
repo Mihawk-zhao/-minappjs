@@ -21,6 +21,8 @@ import setOneMany_temp from './setOneMany'
 import update_temp from './update'
 import updateMany_temp from './updateMany'
 import updateOneMany_temp from './updateOneMany'
+import subscribe_temp from './subscribe'
+import unsubscribe_temp from './unsubscribe'
 //文件
 import countFile_temp from './countFile'
 import deleteFile_temp from './deleteFile'
@@ -80,6 +82,8 @@ export default {
     update: update_temp,
     updateMany: updateMany_temp,
     updateOneMany: updateOneMany_temp,
+    subscribe: subscribe_temp,
+    unsubscribe: unsubscribe_temp,
 
     countFile: countFile_temp,
     deleteFile: deleteFile_temp,
@@ -137,6 +141,8 @@ export const setOneMany = setOneMany_temp
 export const update = update_temp
 export const updateMany = updateMany_temp
 export const updateOneMany = updateOneMany_temp
+export const subscribe = subscribe_temp
+export const unsubscribe = unsubscribe_temp
 
 export const countFile = countFile_temp
 export const deleteFile = deleteFile_temp
