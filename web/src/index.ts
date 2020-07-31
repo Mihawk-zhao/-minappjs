@@ -10,7 +10,8 @@ import getContentGroup_temp from './getContentGroup'
 //数据表
 import count_temp from './count'
 import countMany_temp from './countMany'
-import deleteData_temp from './deleteData'
+import deleteOne_temp from './deleteOne'
+import deleteOneMany_temp from './deleteOneMany'
 import find_temp from './find'
 import findMany_temp from './findMany'
 import get_temp from './get'
@@ -21,6 +22,8 @@ import setOneMany_temp from './setOneMany'
 import update_temp from './update'
 import updateMany_temp from './updateMany'
 import updateOneMany_temp from './updateOneMany'
+import subscribe_temp from './subscribe'
+import unsubscribe_temp from './unsubscribe'
 //文件
 import countFile_temp from './countFile'
 import deleteFile_temp from './deleteFile'
@@ -71,7 +74,8 @@ export default {
     
     count: count_temp,
     countMany: countMany_temp,
-    deleteData: deleteData_temp,
+    deleteOne: deleteOne_temp,
+    deleteOneMany: deleteOneMany_temp,
     find: find_temp,
     findMany: findMany_temp,
     get: get_temp,
@@ -82,6 +86,8 @@ export default {
     update: update_temp,
     updateMany: updateMany_temp,
     updateOneMany: updateOneMany_temp,
+    subscribe: subscribe_temp,
+    unsubscribe: unsubscribe_temp,
 
     countFile: countFile_temp,
     deleteFile: deleteFile_temp,
@@ -130,7 +136,8 @@ export const getContentGroup = getContentGroup_temp
   
 export const count = count_temp
 export const countMany = countMany_temp
-export const deleteData = deleteData_temp
+export const deleteOne = deleteOne_temp
+export const deleteOneMany = deleteOneMany_temp
 export const find = find_temp
 export const findMany = findMany_temp
 export const get = get_temp
@@ -141,6 +148,8 @@ export const setOneMany = setOneMany_temp
 export const update = update_temp
 export const updateMany = updateMany_temp
 export const updateOneMany = updateOneMany_temp
+export const subscribe = subscribe_temp
+export const unsubscribe = unsubscribe_temp
 
 export const countFile = countFile_temp
 export const deleteFile = deleteFile_temp

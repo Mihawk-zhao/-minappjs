@@ -10,8 +10,8 @@
 import { getBaaSF } from './utils/utils'
 
 function fetchGet(table: string | number, id: string, params: {
-  select?: string[]
-  expand?: string[]
+  expand?: string | string[]
+  select?: string | string[]
 } = {}){
   let BaaS_F = getBaaSF()
 

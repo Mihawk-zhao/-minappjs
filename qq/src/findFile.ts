@@ -28,9 +28,9 @@ function fetchFindFile(params: {
   r: string
   page?: number
   limit?: number
-  orderBy?: string
-  expand?: string[]
-  select?: string[]
+  orderBy?: string | string[]
+  expand?: string | string[]
+  select?: string | string[]
   withCount?: false | boolean
   [propName: string]: [fieldList | string, methodList, ...any[]] | string | number | boolean | string[] | undefined
 }){

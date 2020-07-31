@@ -11,9 +11,8 @@ import { getBaaSF } from './utils/utils'
 
 
 
-function fetchDeleteData(table: string | number, id: string){
+function fetchDeleteOne(table: string | number, id: string){
   let BaaS_F = getBaaSF()
-
 
   return new Promise((resolve, reject)=>{
     let Product = new BaaS_F.TableObject(table)
@@ -26,4 +25,4 @@ function fetchDeleteData(table: string | number, id: string){
     })
   })
 }
-export default fetchDeleteData
+export default fetchDeleteOne

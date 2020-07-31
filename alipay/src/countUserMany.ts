@@ -17,24 +17,23 @@ type methodList = '=' | '!=' | '<' | '<=' | '>' | '>=' |
 'isNull' | 'isExists' |
 'include' | 'withinCircle' | 'withinRegion' | 'within'
 
+interface IFindItem {
+  p0?: [string, methodList, ...any[]]
+  p1?: [string, methodList, ...any[]]
+  p2?: [string, methodList, ...any[]]
+  p3?: [string, methodList, ...any[]]
+  p4?: [string, methodList, ...any[]]
+  p5?: [string, methodList, ...any[]]
+  p6?: [string, methodList, ...any[]]
+  p7?: [string, methodList, ...any[]]
+  p8?: [string, methodList, ...any[]]
+  p9?: [string, methodList, ...any[]]
+  r: string
+  [propName: string]: [string, methodList, ...any[]] | string | number | boolean | string[] | undefined
+}
 
 
-function fetchCountUserMany(findArray: {
-  [index: number]: {
-    p0?: [string, methodList, ...any[]]
-    p1?: [string, methodList, ...any[]]
-    p2?: [string, methodList, ...any[]]
-    p3?: [string, methodList, ...any[]]
-    p4?: [string, methodList, ...any[]]
-    p5?: [string, methodList, ...any[]]
-    p6?: [string, methodList, ...any[]]
-    p7?: [string, methodList, ...any[]]
-    p8?: [string, methodList, ...any[]]
-    p9?: [string, methodList, ...any[]]
-    r: string
-    [propName: string]: [string, methodList, ...any[]] | string | number | boolean | string[] | undefined
-  }
-}, plimit: number = 10){
+function fetchCountUserMany(findArray: IFindItem[], plimit: number = 10){
   return new Promise((resolve, reject)=>{
     let limit = pLimit(plimit)
     let input = []

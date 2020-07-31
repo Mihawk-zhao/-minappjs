@@ -41,6 +41,8 @@ function fetchUpdateOneMany(table: string | number, params: {
   u: {
     [propName: string]: [upMethodList, dataType] | dataType
   }
+  enableTrigger?: boolean
+  withCount?: boolean
 }){
   let BaaS_F = getBaaSF()
 

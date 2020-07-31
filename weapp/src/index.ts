@@ -10,7 +10,8 @@ import getContentGroup_temp from './getContentGroup'
 //数据表
 import count_temp from './count'
 import countMany_temp from './countMany'
-import deleteData_temp from './deleteData'
+import deleteOne_temp from './deleteOne'
+import deleteOneMany_temp from './deleteOneMany'
 import find_temp from './find'
 import findMany_temp from './findMany'
 import get_temp from './get'
@@ -35,7 +36,9 @@ import invoke_temp from './invoke'
 import getAsyncJobResult_temp from './getAsyncJobResult'
 import getServerDate_temp from './getServerDate'
 import sendSmsCode_temp from './sendSmsCode'
+import subscribeMessage_temp from './subscribeMessage'
 import verifySmsCode_temp from './verifySmsCode'
+import wxDecryptData_temp from './wxDecryptData'
 //支付
 import pay_temp from './pay'
 //网络请求
@@ -71,7 +74,8 @@ export default {
     
     count: count_temp,
     countMany: countMany_temp,
-    deleteData: deleteData_temp,
+    deleteOne: deleteOne_temp,
+    deleteOneMany: deleteOneMany_temp,
     find: find_temp,
     findMany: findMany_temp,
     get: get_temp,
@@ -96,7 +100,9 @@ export default {
     getAsyncJobResult: getAsyncJobResult_temp,
     getServerDate: getServerDate_temp,
     sendSmsCode: sendSmsCode_temp,
+    subscribeMessage: subscribeMessage_temp,
     verifySmsCode: verifySmsCode_temp,
+    wxDecryptData: wxDecryptData_temp,
 
     pay: pay_temp,
 
@@ -130,7 +136,8 @@ export const getContentGroup = getContentGroup_temp
   
 export const count = count_temp
 export const countMany = countMany_temp
-export const deleteData = deleteData_temp
+export const deleteOne = deleteOne_temp
+export const deleteOneMany = deleteOneMany_temp
 export const find = find_temp
 export const findMany = findMany_temp
 export const get = get_temp
@@ -155,7 +162,9 @@ export const invoke = invoke_temp
 export const getAsyncJobResult = getAsyncJobResult_temp
 export const getServerDate = getServerDate_temp
 export const sendSmsCode = sendSmsCode_temp
+export const subscribeMessage = subscribeMessage_temp
 export const verifySmsCode = verifySmsCode_temp
+export const wxDecryptData = wxDecryptData_temp
 
 export const pay = pay_temp
 

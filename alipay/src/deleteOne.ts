@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-01-24 11:03:54
- * @LastEditTime: 2020-06-03 21:08:58
+ * @LastEditTime: 2020-06-06 08:49:42
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /minapp-fetch/src/fetch/data/delete.ts
@@ -11,7 +11,7 @@ import { getBaaSF } from './utils/utils'
 
 
 
-function fetchDeleteData(table: string | number, id: string){
+function fetchDeleteOne(table: string | number, id: string){
   let BaaS_F = getBaaSF()
 
 
@@ -26,5 +26,4 @@ function fetchDeleteData(table: string | number, id: string){
     })
   })
 }
-
-export default fetchDeleteData
+export default fetchDeleteOne
