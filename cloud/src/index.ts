@@ -16,7 +16,8 @@ import updateContent_temp from './updateContent'
 //数据表
 import count_temp from './count'
 import countMany_temp from './countMany'
-import deleteData_temp from './deleteData'
+import deleteOne_temp from './deleteOne'
+import deleteOneMany_temp from './deleteOneMany'
 import find_temp from './find'
 import findMany_temp from './findMany'
 import get_temp from './get'
@@ -90,7 +91,8 @@ export default {
     
     count: count_temp,
     countMany: countMany_temp,
-    deleteData: deleteData_temp,
+    deleteOne: deleteOne_temp,
+    deleteOneMany: deleteOneMany_temp,
     find: find_temp,
     findMany: findMany_temp,
     get: get_temp,
@@ -161,7 +163,8 @@ export const updateContent = updateContent_temp
   
 export const count = count_temp
 export const countMany = countMany_temp
-export const deleteData = deleteData_temp
+export const deleteOne = deleteOne_temp
+export const deleteOneMany = deleteOneMany_temp
 export const find = find_temp
 export const findMany = findMany_temp
 export const get = get_temp

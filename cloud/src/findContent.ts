@@ -23,9 +23,9 @@ function fetchFindContent(contentGroupID: number, params: {
   r: string
   page?: number //默认值
   limit?: number //默认值
-  orderBy?: string //默认值
-  expand?: string[] //默认值
-  select?: string[] //默认值
+  orderBy?: string | string[]
+  expand?: string | string[]
+  select?: string | string[]
   withCount?: false | boolean //默认值
   [propName: string]: [string, methodList, ...any[]] | string | number | boolean | string[] | undefined
 }){

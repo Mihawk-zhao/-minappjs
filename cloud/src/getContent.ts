@@ -11,8 +11,8 @@ import { getBaaSF } from './utils/utils'
 
 
 function fetchGetContent(contentGroupID: number, richTextID: number, params: {
-  select?: string[] | undefined
-  expand?: string[] | undefined
+  expand?: string | string[]
+  select?: string | string[]
 } = {}){
   let BaaS_F = getBaaSF()
 

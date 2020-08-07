@@ -11,8 +11,8 @@ import { getBaaSF } from './utils/utils'
 
 
 function fetchGetUser(uid: number, params: {
-  expand?: string[]
-  select?: string[]
+  expand?: string | string[]
+  select?: string | string[]
 } = {}){
   let BaaS_F = getBaaSF()
 

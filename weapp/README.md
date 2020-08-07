@@ -31,6 +31,9 @@ import { find } from '@minappjs/weapp'
 [Fishbone资讯](https://wefishbone.com)
     
 ### 更新日志    
+#### v3.14.3  
+- 修复未调用`subscribe`前，`unsubscribe`方法会报undefined错的问题  
+  
 #### v3.14.2  
 - 新增实时数据库`subscribe`和`unsubscribe`方法。[使用示例](https://wefishbone.com/detail/5f22d20a5cab4d6f035262c8)。  
 - `deleteData`更名为`deleteOne`，新增`deleteOneMany`、`subscribeMessage`、`wxDecryptData`方法   

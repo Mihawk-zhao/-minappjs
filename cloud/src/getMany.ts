@@ -14,8 +14,8 @@ const pLimit = require('p-limit')
 // 同时进行多张表的GET
 function fetchGetMany(getArray: {
   [index: number]: [string | number, string, {
-    select: string[]
-    expand: string[]
+    expand?: string | string[]
+    select?: string | string[]
   }]
 }, plimit: number = 10){
   return new Promise((resolve, reject)=>{

@@ -1,6 +1,6 @@
 {
   "name": "@minappjs/tt",
-  "version": "3.14.0",
+  "version": "3.14.3",
   "description": "知晓云接口封装，js跨平台【头条小程序端】",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",

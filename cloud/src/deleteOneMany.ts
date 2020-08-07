@@ -1,6 +1,6 @@
-
 import { getBaaSF } from './utils/utils'
 import { FIND_R_ERROR, FIND_CHECKR_ERROR, FIND_P_ERROR } from './constants/error'
+
 
 
 type methodList = '=' | '!=' | '<' | '<=' | '>' | '>=' |
@@ -10,7 +10,8 @@ type methodList = '=' | '!=' | '<' | '<=' | '>' | '>=' |
 'isNull' | 'isExists' |
 'include' | 'withinCircle' | 'withinRegion' | 'within'
 
-function fetchFindContent(contentGroupID: number, params: {
+
+function fetchDeleteOneMany(table: string | number, params: {
   p0?: [string, methodList, ...any[]]
   p1?: [string, methodList, ...any[]]
   p2?: [string, methodList, ...any[]]
@@ -22,23 +23,20 @@ function fetchFindContent(contentGroupID: number, params: {
   p8?: [string, methodList, ...any[]]
   p9?: [string, methodList, ...any[]]
   r: string
-  page?: number //默认值
-  limit?: number //默认值
-  orderBy?: string | string[]
-  expand?: string | string[]
-  select?: string | string[]
-  withCount?: false | boolean //默认值
+  page?: number
+  limit?: number
+  withCount?: false | boolean
+  enableTrigger?: boolean
   [propName: string]: [string, methodList, ...any[]] | string | number | boolean | string[] | undefined
 }){
   let BaaS_F = getBaaSF()
-
 
   return new Promise((resolve, reject)=>{
     if(!params.r){
       throw new Error(FIND_R_ERROR)
     }
     let r = params.r.replace(/\s+/g,'')       //去掉空格
-    let query: any = {}
+    let query: any  = {}
 
     let checkR = r.replace(/[^\(\)]/g, '')
     while(/\(\)/g.test(checkR)){
@@ -51,33 +49,27 @@ function fetchFindContent(contentGroupID: number, params: {
 
     let stack = []   //栈
     let topBrackets: string = ''     //最近的一个括号里的内容
-    let stackTop: string | undefined = ''    //栈顶的内容
+    let stackTop: string | undefined = ''     //栈顶的内容
     let list = r.replace(/(\()|(\))/g, '#$1$2#').split(/#/g)
 
     //1.将所有p转换成query类型
     let ps = r.replace(/\(|\)/g, '').split(/&&|\|\|/g)
     for(let i = 0; i < ps.length; i++){
       query[ps[i]] = new BaaS_F.Query()
-      // 
       switch(params[ps[i]][1]){
         case 'in':
-          // 
           query[ps[i]].in(params[ps[i]][0], params[ps[i]][2])
           break
         case 'notIn':
-          // 
           query[ps[i]].notIn(params[ps[i]][0], params[ps[i]][2])
           break
         case 'contains':
-          // 
           query[ps[i]].contains(params[ps[i]][0], params[ps[i]][2])
           break
         case 'arrayContains':
-          // 
           query[ps[i]].arrayContains(params[ps[i]][0], params[ps[i]][2])
           break
         case 'matches':
-          // 
           query[ps[i]].matches(params[ps[i]][0], params[ps[i]][2])
           break
         case 'stringLength':
@@ -90,58 +82,44 @@ function fetchFindContent(contentGroupID: number, params: {
           query[ps[i]].matches(params[ps[i]][0], reg)
           break
         case 'hasKey':
-          // 
           query[ps[i]].hasKey(params[ps[i]][0], params[ps[i]][2])
           break
         case 'include':
-          // 
           query[ps[i]].include(params[ps[i]][0], new BaaS_F.GeoPoint(params[ps[i]][2][0], params[ps[i]][2][1]))
           break
         case 'withinCircle':
-          // 
           query[ps[i]].withinCircle(params[ps[i]][0], new BaaS_F.GeoPoint(params[ps[i]][2][0], params[ps[i]][2][1]), params[ps[i]][3])
           break
         case 'withinRegion':
-          // 
           query[ps[i]].withinRegion(params[ps[i]][0], new BaaS_F.GeoPoint(params[ps[i]][2][0], params[ps[i]][2][1]), params[ps[i]][3], params[ps[i]][4] || 0)
           break
         case 'within':
           let tempGeo = params[ps[i]]
-          // 
           tempGeo.splice(0,2)
-          // 
           query[ps[i]].within(params[ps[i]][0], new BaaS_F.GeoPolygon(tempGeo))
           break;
         case 'isNull':
-          // 
           params[ps[i]][2] ? query[ps[i]].isNull(params[ps[i]][0]) : query[ps[i]].isNotNull(params[ps[i]][0])
           break
         case 'isExists':
-          // 
           params[ps[i]][2] ? query[ps[i]].exists(params[ps[i]][0]) : query[ps[i]].notExists(params[ps[i]][0])
           break
         case '=':
-          // 
           query[ps[i]].compare(params[ps[i]][0], '=', params[ps[i]][2])
           break
         case '!=':
-          // 
           query[ps[i]].compare(params[ps[i]][0], '!=', params[ps[i]][2])
           break
         case '<':
-          // 
           query[ps[i]].compare(params[ps[i]][0], '<', params[ps[i]][2])
           break
         case '<=':
-          // 
           query[ps[i]].compare(params[ps[i]][0], '<=', params[ps[i]][2])
           break
         case '>':
-          // 
           query[ps[i]].compare(params[ps[i]][0], '>', params[ps[i]][2])
           break
         case '>=':
-          // 
           query[ps[i]].compare(params[ps[i]][0], '>=', params[ps[i]][2])
           break
         default:
@@ -192,20 +170,18 @@ function fetchFindContent(contentGroupID: number, params: {
       }
       n += 2
     }
-    let MyContentGroup: any = null
-    MyContentGroup = new BaaS_F.ContentGroup(contentGroupID)
-    // 
-    MyContentGroup.setQuery(QQ).limit(params.limit || 20).offset((params.limit || 20) * ((params.page || 1) - 1)).orderBy(params.orderBy || '-created_at').select(params.select || []).expand(params.expand || []).find({withCount: params.withCount || false}).then((res: any) => {
+
+    let Product = new BaaS_F.TableObject(table)
+    Product.limit(params.limit || 20).offset((params.limit || 20) * ((params.page || 1) - 1)).delete(QQ, {
+      enableTrigger: params.enableTrigger === undefined ? true : params.enableTrigger,
+      withCount: params.withCount || false
+    }).then((res: any) => {
       // success
       resolve(res)
     }, (err: any) => {
       // err
       reject(err)
     })
-
-
   })
-  
 }
-
-export default fetchFindContent
+export default fetchDeleteOneMany

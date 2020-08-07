@@ -1,6 +1,6 @@
 {
   "name": "@minappjs/cloud",
-  "version": "3.10.1",
+  "version": "3.14.0",
   "description": "知晓云接口封装，js跨平台【云函数端】",
   "main": "./lib/index.js",
   "types": "./lib/index.d.ts",
